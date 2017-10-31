@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Dungeon Finder</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="find">Find a Game</a></li>
+      <li><a href="add">Add opening(s)</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<h1>New Game</h1>
+    <div class="container">
+      <div>
+        <label>Enter Location:</label>
+        <input #newLocation>
+      </div>
+      <div>
+        <label>Enter Date:</label>
+        <input #newDate>
+      </div>
+      <div>
+        <label>Enter Time:</label>
+        <input #newTime>
+      </div>
+      <div>
+        <label>Enter Desired # of Players:</label>
+        <input #newPlayer>
+      </div>
+      <div>
+        <label>Enter Contact Email:</label>
+        <input #newEmail>
+      </div>
+      <br>
+      <button class= "btn btn-success"(click)="submitForm(newLocation.value, newDate.value, newTime.value, newPlayer.value, newEmail.value)">Add</button>
+      <br>
+      <br>
+    </div>
