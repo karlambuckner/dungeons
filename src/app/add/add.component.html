@@ -35,7 +35,7 @@
         <input #newDetails>
       </div>
       <br>
-      <button class= "btn submit"(click)="submitForm(newLocation.value, newDate.value, newTime.value, newPlayer.value, newEmail.value, newDetails.value)">Add</button>
+      <button (click)="submitForm(newLocation.value, newDate.value, newTime.value, newPlayer.value, newEmail.value, newDetails.value); newLocation.value='', newDate.value='', newTime.value='', newPlayer.value='', newEmail.value='', newDetails.value=''">Add</button>
       <br>
       <br>
     </div>

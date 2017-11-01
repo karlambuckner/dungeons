@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Game } from './game.model';
-import { GAMES } from './mock-games';
+// import { GAMES } from './mock-games';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
@@ -14,11 +14,15 @@ export class GameService {
     return this.games;
   }
 
+  addGame(newGame: Game) {
+   this.games.push(newGame);
+ }
+
   getGameById(gameId: number){
-    for (var i = 0; i <= GAMES.length - 1; i++) {
-      if (GAMES[i].id === gameId) {
-        return GAMES[i];
-      }
-    }
+    // for (var i = 0; i <= GAMES.length - 1; i++) {
+    //   if (GAMES[i].id === gameId) {
+    //     return GAMES[i];
+    //   }
+    // }
   }
 }

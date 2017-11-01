@@ -20,6 +20,6 @@ export class WelcomeComponent implements OnInit {
   }
 
   goToDetailPage(clickedGame: Game) {
-       this.router.navigate(['games', clickedGame.id]);
+      //  this.router.navigate(['games', clickedGame.id]);
      };
 }
