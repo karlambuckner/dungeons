@@ -1,0 +1,26 @@
+{ "games": [{
+    "location": "Function PDX",
+    "date": "11-06-2017",
+    "time": "6:30PM",
+    "player": 3,
+    "email": "dungeonsandhangovers@gmail.com",
+    "details": "Tickets are $40 and include dinner and a welcome drink. Come to our DnD pop-up!",
+    "id": 1
+    }, {
+    "location": "Guardian Games",
+    "date": "11-10-2017",
+    "time": "7:00PM",
+    "player": 5,
+    "email": "guradiangames@gmail.com",
+    "details": "Free candy bars and gaming!",
+    "id": 2
+      }, {
+    "location": "Adam's house SE 81st Ave",
+    "date": "11-15-2017",
+    "time": "6:00PM",
+    "player": 1,
+    "email": "adamsigal@gmail.com",
+    "details": "Looking for a new person to join our group!",
+    "id": 3
+  }]
+}

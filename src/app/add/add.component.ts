@@ -9,8 +9,8 @@ import { Game } from './../game.model';
 export class AddComponent implements OnInit {
   @Output() newGameSender = new EventEmitter();
 
-  submitForm(location: string, date: string, time: string, player: number, email: string) {
-    var newGameToAdd: Game = new Game(location, date, time, player, email);
+  submitForm(location: string, date: string, time: string, player: number, email: string, details: string, id: number) {
+    var newGameToAdd: Game = new Game(location, date, time, player, email, details, id);
     this.newGameSender.emit(newGameToAdd);
   }
 

@@ -9,6 +9,18 @@ import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { FindComponent } from './find/find.component';
 import { AddComponent } from './add/add.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { GameDetailComponent } from './game-detail/game-detail.component';
+import { AdminComponent } from './admin/admin.component';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
@@ -16,13 +28,17 @@ import { AddComponent } from './add/add.component';
     WelcomeComponent,
     AboutComponent,
     FindComponent,
-    AddComponent
+    AddComponent,
+    GameDetailComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

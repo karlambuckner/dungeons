@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <img src="src/assets/dragon.jpg" alt="dragon image" width="600px" height=auto>
+<div class="container">
+    <h1>Dungeon Finder</h1>
+</div>
+
+  <img src="src/assets/dragon.jpg" alt="dragon image" width="700px" height=auto>
     <h2>
-      Welcome to Dungeon Finder!
+      Welcome to Dungeon Finder! Find a place to play Dungeons and Dragons or host a gaming event.
     </h2>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Dungeon Finder</a>
+  <br>
+  <h3>Popular D&D events:</h3>
+  <br>
+    <div *ngFor="let game of games | async" (click)="goToDetailPage(game)" class="panel panel-default">
+      <div class="panel-body">
+        <h3>{{game.location}}
+          <br>
+          {{game.details}}</h3>
+      </div>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="about">About</a></li>
-      <li><a href="find">Find a Game</a></li>
-      <li><a href="add">Add opening(s)</a></li>
-    </ul>
-  </div>
-</nav>
-
-  </body>
-</html>
+    <br>
+    <br>
+    <br>

@@ -1,18 +1,1 @@
-body {
-  font-family: 'Metamorphous', cursive;
-  background-color: #59000d;
-  color: #adab7b;
-  text-align: center;
-}
 
-img {
-  margin: auto;
-  display: block;
-}
-
-.navbar a:hover {
-  background-color: #adab7b;
-  color: black;
-  border-color: #adab7b;
-
-}
