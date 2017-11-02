@@ -12,6 +12,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class WelcomeComponent implements OnInit {
   games: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private gameService: GameService) { }
 
@@ -19,7 +20,7 @@ export class WelcomeComponent implements OnInit {
     this.games = this.gameService.getGames();
   }
 
-  goToDetailPage(clickedGame: Game) {
-      //  this.router.navigate(['games', clickedGame.id]);
+  goToDetailPage(clickedGame) {
+    this.router.navigate(['games', clickedGame.$key]);
      };
 }

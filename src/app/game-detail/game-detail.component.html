@@ -1,5 +1,8 @@
 <div>
-  <h3>{{gameToDisplay.location}}</h3>
-  <h4>{{gameToDisplay.date}}</h4>
-  <p>{{gameToDisplay.time}}</p>
+  <h3>{{(gameToDisplay | async)?.location}}</h3>
+  <h4>{{(gameToDisplay | async)?.date}}</h4>
+  <p>{{(gameToDisplay | async)?.time}}</p>
+  <p>{{(gameToDisplay | async)?.player}}</p>
+  <p>{{(gameToDisplay | async)?.email}}</p>
+  <p>{{(gameToDisplay | async)?.details}}</p>
 </div>

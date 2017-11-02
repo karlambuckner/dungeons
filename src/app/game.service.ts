@@ -6,6 +6,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class GameService {
   games: FirebaseListObservable<any[]>;
+
   constructor(private database: AngularFireDatabase) {
     this.games = database.list('games');
   }
@@ -18,11 +19,7 @@ export class GameService {
    this.games.push(newGame);
  }
 
-  getGameById(gameId: number){
-    // for (var i = 0; i <= GAMES.length - 1; i++) {
-    //   if (GAMES[i].id === gameId) {
-    //     return GAMES[i];
-    //   }
-    // }
+  getGameById(gameId: string){
+    return this.database.object('/games/' + gameId);
   }
 }
