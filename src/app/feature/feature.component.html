@@ -1,0 +1,20 @@
+<h3>All D&D events:</h3>
+<h4>Edit below if needed</h4>
+<br>
+  <div *ngFor="let game of games | async" class="panel panel-default">
+    <div class="panel-body">
+      <h3 (click)="goToDetailPage(game)">
+      {{game.location}}
+        <br>
+        {{game.details}}</h3>
+    <div *ngIf="currentRoute === '/add'">
+          {{game.date}}
+      <app-edit-game [selectedGame]="game"></app-edit-game>
+
+
+    </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>

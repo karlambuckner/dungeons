@@ -22,4 +22,19 @@ export class GameService {
   getGameById(gameId: string){
     return this.database.object('/games/' + gameId);
   }
+
+updateGame(localUpdatedGame){
+  var gameEntryInFirebase = this.getGameById(localUpdatedGame.$key);
+  gameEntryInFirebase.update({location: localUpdatedGame.location,
+                             date: localUpdatedGame.date,
+                             time: localUpdatedGame.time,
+                             player: localUpdatedGame.player,
+                             email: localUpdatedGame.email,
+                             details: localUpdatedGame.details});
+}
+
+deleteGame(localGameToDelete){
+   var gameEntryInFirebase = this.getGameById(localGameToDelete.$key);
+   gameEntryInFirebase.remove();
+ }
 }

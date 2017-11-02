@@ -1,3 +1,28 @@
-<p>
-  edit-game works!
-</p>
+<h4>Edit Game</h4>
+
+<label>New Game Location:</label>
+<input [(ngModel)]="selectedGame.location">
+<br>
+
+<label>New Game Date:</label>
+<input [(ngModel)]="selectedGame.date">
+<br>
+
+<label>New Game Time:</label>
+<input [(ngModel)]="selectedGame.time">
+<br>
+
+<label>New Game Player:</label>
+<input [(ngModel)]="selectedGame.player">
+<br>
+
+<label>New Game Email:</label>
+<input [(ngModel)]="selectedGame.email">
+<br>
+
+<label>New Game Details:</label>
+<input [(ngModel)]="selectedGame.details">
+
+<button (click)="beginUpdatingGame(selectedGame)">Update</button>
+<hr>
+<button (click)="beginDeletingAlbum(selectedAlbum)">Delete</button>

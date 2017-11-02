@@ -1,21 +1,9 @@
 <div class="container">
     <h1>Dungeon Finder</h1>
 </div>
-
-  <img src="src/assets/dragon.jpg" alt="dragon image" width="700px" height=auto>
-    <h2>
-      Welcome to Dungeon Finder! Find a place to play Dungeons and Dragons or host a gaming event.
-    </h2>
+<img src="src/assets/dragon.jpg" alt="dragon image" width="700px" height=auto>
+  <h2>
+    Welcome to Dungeon Finder! Find a place to play Dungeons and Dragons or host a gaming event.
+  </h2>
   <br>
-  <h3>Popular D&D events:</h3>
-  <br>
-    <div *ngFor="let game of games | async" (click)="goToDetailPage(game)" class="panel panel-default">
-      <div class="panel-body">
-        <h3>{{game.location}}
-          <br>
-          {{game.details}}</h3>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
+  
